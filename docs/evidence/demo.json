@@ -1,0 +1,22 @@
+{
+  "redisDownOpen": {
+    "allowed": true,
+    "remaining": -1,
+    "retryAfterMillis": 0,
+    "degraded": true,
+    "reason": "REDIS_UNAVAILABLE"
+  },
+  "healthy": {
+    "allowed": true,
+    "remaining": 4,
+    "retryAfterMillis": 0,
+    "degraded": false,
+    "reason": "TOKEN"
+  },
+  "metrics": {
+    "denied": 1,
+    "degraded": 2,
+    "allowed": 2
+  },
+  "redisDownClosedStatus": 503
+}

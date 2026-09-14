@@ -1,0 +1,12 @@
+services:
+  redis:
+    image: redis:8.10.1-alpine
+    ports: ["127.0.0.1:16380:6379"]
+    command: ["redis-server", "--maxmemory", "64mb", "--maxmemory-policy", "noeviction"]
+    mem_limit: 128m
+    cpus: 1
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
