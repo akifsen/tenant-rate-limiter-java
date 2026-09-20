@@ -44,3 +44,7 @@ EVALSHA recovers once from NOSCRIPT using SCRIPT LOAD then EVALSHA (at most thre
 ## Evidence
 
 `./mvnw verify -Pintegration` runs actual Redis races across four library instances, scope isolation/refill, SCRIPT FLUSH recovery, idle expiration, policy mismatch, authenticated HTTP and forged-header rejection. Unavailable Redis tests verify both failure policies and counters. Docker absence fails the integration build. [Verification](docs/verification.md) records executed results; [ADR](docs/adr/001-token-bucket.md) records tradeoffs. No production SLA, published release or GitHub CI pass is claimed. MIT source; upstream dependency licenses remain applicable.
+
+## Review corrections — 2026-09-20
+
+Demo-only MVC and Spring Security dependencies are optional in the published POM; the regular library does not force a web/security stack into consumers.
